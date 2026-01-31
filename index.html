@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haziq Khan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="profile-container">
+            <div class="profile-glow"></div>
+            <img src="hk.jpg" alt="Haziq Khan" class="profile-img">
+        </div>
+        <h1>Haziq Khan</h1>
+        <p class="job-title">Graphic Designer</p>
+        <div class="cta-container">
+            <a href="https://www.linkedin.com/in/haziq-khan-850173395/" target="_blank" class="btn btn-primary">LinkedIn</a>
+            <a href="HAZIQ KHAN.pdf" class="btn btn-secondary" download>Download CV</a>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <p>I craft high-impact visuals that balance luxury aesthetics with precise composition and commercial intent. My strength lies in translating brand identity into clean, cinematic designs that feel premium, intentional, and market-ready.</p>
+        </div>
+    </section>
+
+    <main class="container portfolio-section">
+        
+        <section class="category-block">
+            <div class="category-header">
+                <h2>Logo Designs</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid">
+                <article class="project-item">
+                    <img src="becec0c6-d73d-49dd-80a3-475da3c2fd63.jpg" alt="Glam Nail Logo">
+                    <div class="overlay"><span>Branding Identity</span></div>
+                </article>
+                <article class="project-item">
+                    <img src="dd7b27ab-9729-4a8c-b557-367750b6ea41.jpg" alt="Lunéra Logo">
+                    <div class="overlay"><span>Elegant Minimalism</span></div>
+                </article>
+                <article class="project-item">
+                    <img src="893a6268-97d1-4b34-9ad5-f37f40e1a377.jpg" alt="Sip & Snap Logo">
+                    <div class="overlay"><span>Vintage Illustration</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-block">
+            <div class="category-header">
+                <h2>Social Media Posts</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid">
+                <article class="project-item">
+                    <img src="noirr 3.png" alt="Black Noir Perfume">
+                    <div class="overlay"><span>Luxury Fragrance Post</span></div>
+                </article>
+                <article class="project-item">
+                    <img src="King.png" alt="King Broast Ad">
+                    <div class="overlay"><span>Food & Beverage Creative</span></div>
+                </article>
+                <article class="project-item">
+                    <img src="Rihaa.PNG" alt="Fragrance Marketing">
+                    <div class="overlay"><span>Rihaa Al Layl Post</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-block">
+            <div class="category-header">
+                <h2>AI Product Photography</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid">
+                <article class="project-item">
+                    <img src="ai model.png" alt="AI Model Generation">
+                    <div class="overlay"><span>AI Model Creation</span></div>
+                </article>
+                <article class="project-item">
+                    <img src="photg44.jpeg" alt="AI Product Phtography">
+                    <div class="overlay"><span>AI Environmental Lighting</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-block">
+            <div class="category-header">
+                <h2>Visiting Card Designs</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid">
+                <article class="project-item">
+                    <img src="card.jpg" alt="Premium Business Card">
+                    <div class="overlay"><span>Tactile Luxury Design</span></div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <h3>Let's create something iconic.</h3>
+            <a href="https://www.linkedin.com/in/haziq-khan-850173395/" target="_blank" class="social-link">Follow on LinkedIn</a>
+            <p class="copyright">© 2026 Haziq Khan. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.category-block').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
